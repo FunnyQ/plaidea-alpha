@@ -10,10 +10,12 @@ body
   color: $c-text
 
 .container
+  padding: 0 1em
   +container($w-mobile) // iphone6plus:414, iphone6:375, others:320
   +breakpoint($b-mobile)
     +container($w-pad)
   +breakpoint($b-pad)
+    padding: 0
     +container($w-desktop)
   +breakpoint($b-desktop)
     +container($w-large)

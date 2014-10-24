@@ -12,5 +12,17 @@
 ########################################
 
 $(window).load ->
-  $(".track-title").marquee()
+  # $(".track-title").marquee()
   return
+
+$ ->
+  $('.player-main').on "mouseenter", ->
+    bg = $(@).find('img').attr('src')
+    $(@).find('.cover-blured').css
+      "background-image": "url("+bg+")"
+      "-webkit-filter": "blur(8px)"
+    .fadeIn()
+  $('.player-main').on "mouseleave", ->
+    $(@).find('.cover-blured').fadeOut()
+    return
+

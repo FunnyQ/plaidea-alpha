@@ -4,37 +4,40 @@ title: Plaidea - 種下創意的種子
 <!-- index.html -->
     <div class="categories-list">
       <div class="container">
-        <% 12.times do |item| %>
+        <% data.basic.each do |item| %>
         <div class="player-item">
           <div class="player-wrapper">
 
             <!-- top info bar -->
             <div class="player-topbar">
               <div class="category-title">
-                <%= data.basic.demo.category %>
+                <%= item.category %>
               </div>
               <div class="track-title">
-                <%= data.basic.demo.artist %> - <%= data.basic.demo.title %>
+                <%= item.artist %> - <%= item.title %>
               </div>
             </div>
 
             <!-- player main area -->
             <div class="player-main">
               <div class="cover">
-                <%= image_holder(500, 500, "test") %>
+                <%= image_tag item.img, :class => "img-responsive" %>
               </div>
+              <div class="cover-blured"></div>
               <div class="ui-wrapper">
-
+                <div class="ui-main">
+                  <i class="fa fa-play"></i>
+                </div>
               </div>
             </div>
 
             <!-- player footer info area -->
             <div class="player-footer">
               <div class="item-hitcount">
-                <span>views</span>
+                <span>views： </span><span class="number"><%= number_with_delimiter(rand(1000000), :delimiter => ',') %></span>
               </div>
               <div class="item-funded">
-                <span>fund</span>
+                <span>fund： </span><span class="number"><%= number_with_delimiter(rand(500000), :delimiter => ',') %></span>
               </div>
             </div>
 

@@ -15,7 +15,6 @@ $player-footer-height: $player-topbar-height
     +gallery(3)
 
 .player-wrapper
-  background-color: #FFF
   +border-radius($player-radius)
 
 .player-topbar
@@ -30,30 +29,67 @@ $player-footer-height: $player-topbar-height
   width: 35%
   padding: 4px 0
   text-align: center
-  background-color: #eee
+  background-color: $c-player-topbar-category-bg
   +border-top-left-radius($player-radius)
-  border-right: 1px solid #888
+  border-right: 2px solid #888
 .track-title
   float: left
+  display: block
   height: $player-topbar-height
   padding: 4px
   width: 65%
   overflow: hidden
-  background-color: #aaa
+  color: $c-player-topbar-text
+  background-color: $c-player-topbar-track-bg
   +border-top-right-radius($player-radius)
 
 .player-main
-  .cover
-    position: relative
+  position: relative
+  overflow: hidden
+  // .cover
+  .cover-blured
+    display: none
+    position: absolute
+    margin: -1px
+    padding: 1px
+    top: 0
+    width: 100%
+    height: 100%
+    +background-size(cover)
+    // transition: 0.5s filter linear
+    // +filter(blur(5px) saturate(2))
+  .ui-wrapper
+    position: absolute
+    top: 0
+    width: 100%
+    height: 100%
+    background: image-url("assets/player-ui-line.png") center bottom no-repeat
+    +background-size(contain)
+    .ui-main
+      width: 70%
+      height: 70%
+      margin: 5% auto 0 auto
+      padding-top: 0.4em
+      +border-radius(50%)
+      background-color: rgba(#fff, .5)
+      text-align: center
+      font-size: 6em
 
 .player-footer
   +clearfix
+  +border-bottom-radius($player-radius)
   font-size: $fz-s
+  color: $c-player-footer-text
+  background-color: $c-player-footer-bg
+  text-align: center
+  .item-hitcount, .item-funded
+    float: left
+    width: 50%
+    padding: 4px 8px
+    height: $player-footer-height
   .item-hitcount
-    float: left
-    width: 50%
-    height: $player-footer-height
+    color: $c-player-footer-view
   .item-funded
-    float: left
-    width: 50%
-    height: $player-footer-height
+    color: $c-player-footer-funded
+  .number
+    color: $c-player-footer-number
