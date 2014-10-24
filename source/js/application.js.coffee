@@ -15,14 +15,34 @@ $(window).load ->
   # $(".track-title").marquee()
   return
 
+
+
 $ ->
   $('.player-main').on "mouseenter", ->
     bg = $(@).find('img').attr('src')
-    $(@).find('.cover-blured').css
+    coverBlured = $(@).find('.cover-blured')
+    uiWrapper = $(@).find('.ui-wrapper')
+
+    coverBlured.css
       "background-image": "url("+bg+")"
-      "-webkit-filter": "blur(8px)"
+      "-webkit-filter": "blur(8px) saturate(2)"
     .fadeIn()
-  $('.player-main').on "mouseleave", ->
-    $(@).find('.cover-blured').fadeOut()
+    # $(@).find('.ui-wrapper').fadeIn()
+    $(@).on "mouseleave", ->
+      coverBlured.fadeOut()
+      # $(@).find('.ui-wrapper').fadeOut()
     return
+  return
+
+
+$ ->
+  uiController = $('.ui-controller')
+  uiController.on "click", ->
+    if $(@).hasClass('active')
+      $(@).html('<i class="fa fa-play"></i>').removeClass('active')
+      return
+    else
+      $(@).addClass('active').html('<i class="fa fa-pause"></i>')
+      return
+
 
