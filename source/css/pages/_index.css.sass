@@ -1,0 +1,22 @@
+// *************************************
+//
+//   pages/index
+//
+//
+// *************************************
+
+body
+  background-color: $c-background
+  color: $c-text
+
+.container
+  +container($w-mobile) // iphone6plus:414, iphone6:375, others:320
+  +breakpoint($b-mobile)
+    +container($w-pad)
+  +breakpoint($b-pad)
+    +container($w-desktop)
+  +breakpoint($b-desktop)
+    +container($w-large)
+
+
+

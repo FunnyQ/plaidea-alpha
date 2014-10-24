@@ -1,0 +1,45 @@
+---
+title: Plaidea - 種下創意的種子
+---
+<!-- index.html -->
+    <div class="categories-list">
+      <div class="container">
+        <% 12.times do |item| %>
+        <div class="player-item">
+          <div class="player-wrapper">
+
+            <!-- top info bar -->
+            <div class="player-topbar">
+              <div class="category-title">
+                <%= data.basic.demo.category %>
+              </div>
+              <div class="track-title">
+                <%= data.basic.demo.artist %> - <%= data.basic.demo.title %>
+              </div>
+            </div>
+
+            <!-- player main area -->
+            <div class="player-main">
+              <div class="cover">
+                <%= image_holder(500, 500, "test") %>
+              </div>
+              <div class="ui-wrapper">
+
+              </div>
+            </div>
+
+            <!-- player footer info area -->
+            <div class="player-footer">
+              <div class="item-hitcount">
+                <span>views</span>
+              </div>
+              <div class="item-funded">
+                <span>fund</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>

@@ -1,0 +1,26 @@
+{
+  "name"    : "Plaidea",
+  "version" : "0.1.0.alpha.1",
+  "homepage": "http://plaidea.com/",
+  "authors" : [
+    "FunnyQ <funnyq@funnyq.com>"
+  ],
+  "license": "none",
+  "ignore" : [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery"                 : "~1.11.0",
+    "susy"                   : "~2.1.3",
+    "fontawesome"            : "~4.2.0",
+    "breakpoint-sass"        : "~2.5.0",
+    "sassy-buttons"          : "*",
+    "modernizr"              : "~2.8.3",
+    "bootstrap-sass-official": "~3.2.0",
+    "jQuery.Marquee": "latest"
+  }
+}

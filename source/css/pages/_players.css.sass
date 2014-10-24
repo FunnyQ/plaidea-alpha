@@ -1,0 +1,59 @@
+// ----- player layout variables ----- //
+$player-radius: 8px
+$player-topbar-height: 24px
+$player-footer-height: $player-topbar-height
+
+
+.player-item
+  +span(12)
+  margin-top: 20px
+  +breakpoint($b-mobile)
+    +gallery(6)
+  +breakpoint($b-pad)
+    +gallery(4)
+  +breakpoint($b-desktop)
+    +gallery(3)
+
+.player-wrapper
+  background-color: #FFF
+  +border-radius($player-radius)
+
+.player-topbar
+  +clearfix
+  height: $player-topbar-height
+  color: $c-player-topbar-text
+  font-size: $fz-s
+  +border-top-radius($player-radius)
+.category-title
+  float: left
+  height: $player-topbar-height
+  width: 35%
+  padding: 4px 0
+  text-align: center
+  background-color: #eee
+  +border-top-left-radius($player-radius)
+  border-right: 1px solid #888
+.track-title
+  float: left
+  height: $player-topbar-height
+  padding: 4px
+  width: 65%
+  overflow: hidden
+  background-color: #aaa
+  +border-top-right-radius($player-radius)
+
+.player-main
+  .cover
+    position: relative
+
+.player-footer
+  +clearfix
+  font-size: $fz-s
+  .item-hitcount
+    float: left
+    width: 50%
+    height: $player-footer-height
+  .item-funded
+    float: left
+    width: 50%
+    height: $player-footer-height
