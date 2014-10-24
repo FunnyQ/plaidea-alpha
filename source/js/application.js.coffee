@@ -1,10 +1,5 @@
 ## *************************************
 ##
-##   [Project Name] - Q.Style v1.0.alpha
-##   -> Manifest
-##
-## *************************************
-##
 ## Include plugins with asset pipeline
 ##
 #= require _plugins
@@ -12,7 +7,7 @@
 ########################################
 
 $(window).load ->
-  # $(".track-title").marquee()
+  $(".track-title").marquee()
   return
 
 
@@ -27,10 +22,10 @@ $ ->
       "background-image": "url("+bg+")"
       "-webkit-filter": "blur(8px) saturate(2)"
     .fadeIn()
-    # $(@).find('.ui-wrapper').fadeIn()
+    $(@).find('.ui-wrapper').fadeIn()
     $(@).on "mouseleave", ->
       coverBlured.fadeOut()
-      # $(@).find('.ui-wrapper').fadeOut()
+      $(@).find('.ui-wrapper').fadeOut()
     return
   return
 
