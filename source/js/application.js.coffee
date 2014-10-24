@@ -7,7 +7,8 @@
 ########################################
 
 $(window).load ->
-  $(".track-title").marquee()
+  # $(".track-title").marquee
+  #   allowCss3Support: false
   return
 
 
@@ -35,9 +36,14 @@ $ ->
   uiController.on "click", ->
     if $(@).hasClass('active')
       $(@).html('<i class="fa fa-play"></i>').removeClass('active')
+      $(@).parents('.player-wrapper').find('.track-title').marquee('destroy')
       return
     else
       $(@).addClass('active').html('<i class="fa fa-pause"></i>')
+      $(@).parents('.player-wrapper').find('.track-title').marquee
+        delayBeforeStart: 0
+        duplicated: true
+        gap: 50
       return
 
 
