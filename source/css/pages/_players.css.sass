@@ -50,12 +50,14 @@ $player-footer-height: $player-topbar-height
   .cover-blured
     display: none
     position: absolute
-    margin: -1px
-    padding: 1px
     top: 0
-    width: 100%
-    height: 100%
+    left: 0
+    right: 0
+    bottom: 0
+    margin: -10px
     +background-size(cover)
+    +transform(translate3d(0, 0, 0))
+    +filter(blur(8px) saturate(2))
 .ui-wrapper
   display: none
   position: absolute
