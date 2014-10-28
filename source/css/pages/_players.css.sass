@@ -97,12 +97,16 @@ $player-footer-height: $player-topbar-height
     margin-top: -10px
     .ui-option-btn
       +border-radius(50%)
+      +transition(all, 0.3s)
       background-color: $c-player-ui-option-btn-bg
       border: 2px solid $c-player-ui-option-btn-border
       cursor: pointer
       color: $c-player-ui-option-btn-text
       font-size: $fz-xs
       text-align: center
+      &:hover
+        background-color: $c-player-ui-option-btn-bg-hover
+        color: $c-player-ui-option-btn-text-hover
     .ui-option-btn-icon
       margin: 10px auto 0 auto
       width: 50%
