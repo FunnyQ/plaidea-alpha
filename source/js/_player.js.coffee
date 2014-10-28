@@ -6,7 +6,7 @@
 uiController = $('.ui-controller') # 定義 UI 控制區
 
 
-$(document).ready ->
+$ ->
   # 當滑鼠進入主要操作區域
   $('.player-main').on "mouseenter", ->
 

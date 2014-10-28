@@ -1,0 +1,45 @@
+<% data.basic.each do |item| %>
+<div class="player-item">
+  <div class="player-wrapper">
+
+    <!-- top info bar -->
+    <div class="player-topbar">
+      <div class="category-title">
+        <%= item.category %>
+      </div>
+      <div class="track-title">
+        <%= item.artist %> - <%= item.title %>
+      </div>
+    </div>
+
+    <!-- player main area -->
+    <div class="player-main">
+      <div class="cover">
+        <%= image_tag item.img, :class => "img-responsive" %>
+      </div>
+      <div class="cover-blured" style="background-image: url('/img/<%= item.img %>');"></div>
+      <div class="ui-wrapper">
+        <div class="ui-main">
+          <a href="#" class="ui-controller">
+            <i class="fa fa-play"></i>
+          </a>
+        </div>
+        <div class="ui-option">
+
+        </div>
+      </div>
+    </div>
+
+    <!-- player footer info area -->
+    <div class="player-footer">
+      <div class="item-hitcount">
+        <span>views： </span><span class="number"><%= number_with_delimiter(rand(1000000), :delimiter => ',') %></span>
+      </div>
+      <div class="item-funded">
+        <span>fund： </span><span class="number"><%= number_with_delimiter(rand(500000), :delimiter => ',') %></span>
+      </div>
+    </div>
+
+  </div>
+</div>
+<% end %>

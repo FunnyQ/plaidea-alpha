@@ -3,5 +3,7 @@
  ##########
 
  ✔ 建立框架 @done (14-10-24 21:29)
- ☐ 撥放控制
-   ☐ disable others
+ ✔ 撥放控制 @done (14-10-26 02:10)
+   ✔ disable others @done (14-10-26 02:10)
+
+ ☐ FireFox 支援（用 SVG Filter 功能 fallback）
