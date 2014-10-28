@@ -4,9 +4,13 @@
 
     <!-- top info bar -->
     <div class="player-topbar">
+
+      <!-- 分類 -->
       <div class="category-title">
         <%= item.category %>
       </div>
+
+      <!-- 資訊（演出者 - 標題） -->
       <div class="track-title">
         <%= item.artist %> - <%= item.title %>
       </div>
@@ -14,41 +18,62 @@
 
     <!-- player main area -->
     <div class="player-main">
+
+      <!-- 封面 -->
       <div class="cover">
         <%= image_tag item.img, :class => "img-responsive" %>
       </div>
+
+      <!-- 模糊封面 -->
       <div class="cover-blured" style="background-image: url('/img/<%= item.img %>');"></div>
+
+      <!-- Main UI container -->
       <div class="ui-wrapper">
+
+        <!-- Play & Pause controller -->
         <div class="ui-main">
           <a href="#" class="ui-controller">
             <i class="fa fa-play"></i>
           </a>
         </div>
+
+        <!-- Other options wrapper -->
         <div class="ui-option">
+
+          <!-- Funding button -->
           <div class="ui-fund-wrapper">
             <div class="ui-option-btn ui-option-large pull-right">
 
             </div>
           </div>
+
+          <!-- Slip button -->
           <div class="ui-skip-wrapper">
             <div class="ui-option-btn ui-option-small">
 
             </div>
           </div>
+
+          <!-- Subscribe button -->
           <div class="ui-subscribe-wrapper">
             <div class="ui-option-btn ui-option-large pull-left">
 
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+
+        </div><!-- e/o .ui-options -->
+      </div><!-- e/o .ui-wrapper -->
+    </div><!-- e/o .Player-main -->
 
     <!-- player footer info area -->
     <div class="player-footer">
+
+      <!-- Views count -->
       <div class="item-hitcount">
         <span>views： </span><span class="number"><%= number_with_delimiter(rand(1000000), :delimiter => ',') %></span>
       </div>
+
+      <!-- Funded amount -->
       <div class="item-funded">
         <span>fund： </span><span class="number"><%= number_with_delimiter(rand(500000), :delimiter => ',') %></span>
       </div>
