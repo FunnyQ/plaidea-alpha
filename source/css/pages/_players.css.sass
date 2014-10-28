@@ -59,17 +59,17 @@ $player-footer-height: $player-topbar-height
     +transform(translate3d(0, 0, 0))
     +filter(blur(8px) saturate(2))
 .ui-wrapper
-  // display: none
+  display: none
   position: absolute
   top: 0
   width: 100%
   height: 100%
-  background: image-url("assets/player-ui-line.png") center 85% no-repeat
+  // background: image-url("assets/player-ui-line.png") center 85% no-repeat
   background-color: rgba(#000, .5)
   +background-size(contain)
   .ui-main
-    width: 70%
-    height: 70%
+    width: 60%
+    height: 60%
     margin: 8% auto 0 auto
     // padding-top: 0.5em
     +border-radius(50%)
@@ -79,8 +79,8 @@ $player-footer-height: $player-topbar-height
     font-size: 4em
     .ui-controller
       display: block
-      width: 85%
-      height: 85%
+      width: 100%
+      height: 100%
       margin: 0 auto
       line-height: 2
       +border-radius(50%)
@@ -88,9 +88,25 @@ $player-footer-height: $player-topbar-height
       padding: 0
       color: $c-player-player-main-border
   .ui-option
+    +clearfix
     width: 100%
-    background-color: #FFF
-
+    height: 100%
+  .ui-fund-wrapper, .ui-skip-wrapper, .ui-subscribe-wrapper
+    +span(4)
+    height: 100%
+    margin-top: -10px
+    .ui-option-btn
+      +border-radius(50%)
+      background-color: rgba(#FFF, .5)
+      border: 2px solid $c-player-ui-option-btn-border
+      cursor: pointer
+    .ui-option-large
+      width: 80px
+      height: 80px
+    .ui-option-small
+      width: 50px
+      height: 50px
+      margin: 45% auto 0 auto
 
 .player-footer
   +clearfix
