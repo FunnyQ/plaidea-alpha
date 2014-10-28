@@ -27,7 +27,7 @@ $ ->
 
 
 
-  # 當 UI 控制區被點擊時
+  # UI controller area
   uiController.on "click", (e)->
 
     e.preventDefault() # 取消瀏覽器預設動作
@@ -67,3 +67,6 @@ $ ->
         delayBeforeStart: 0 # 直接啟動
         duplicated: true # 自動重複
         gap: 50 # 間距 50px
+
+
+  # Options btn behavior
