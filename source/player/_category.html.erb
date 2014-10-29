@@ -1,6 +1,6 @@
-<% data.basic.each do |item| %>
-<div class="player-item">
-  <div class="player-wrapper">
+<% data.basic.each_with_index do |item, index| %>
+<div id="trackID-<%= index %>" class="player-item">
+  <div class="player-wrapper trans-03s">
 
     <!-- top info bar -->
     <div class="player-topbar">
@@ -11,9 +11,9 @@
       </div>
 
       <!-- 資訊（演出者 - 標題） -->
-      <div class="track-title">
+      <a href="#" class="track-title">
         <%= item.artist %> - <%= item.title %>
-      </div>
+      </a>
     </div>
 
     <!-- player main area -->
@@ -35,6 +35,7 @@
           <a href="#" class="ui-controller trans-03s">
             <i class="fa fa-play"></i>
           </a>
+          <div class="jplayer-wrapper" data-audio="<%= item.file %>"></div>
         </div>
 
         <!-- Other options wrapper -->
@@ -56,7 +57,6 @@
           <!-- Subscribe button -->
           <div class="ui-subscribe-wrapper">
             <div class="ui-option-btn ui-option-large pull-left trans-03s">
-              <span>subscribe</span>
             </div>
           </div>
 

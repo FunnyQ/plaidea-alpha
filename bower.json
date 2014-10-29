@@ -21,6 +21,7 @@
     "sassy-buttons"          : "*",
     "modernizr"              : "~2.8.3",
     "bootstrap-sass-official": "~3.2.0",
-    "jQuery.Marquee": "latest"
+    "jQuery.Marquee": "latest",
+    "jplayer": "latest"
   }
 }
