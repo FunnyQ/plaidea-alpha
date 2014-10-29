@@ -9,3 +9,4 @@
 ## -------------------------------------
 #= require vendor/_bootstrap
 #= require jQuery.Marquee/jquery.marquee.js
+#= require jplayer/jquery.jplayer/jquery.jplayer

@@ -3,78 +3,95 @@
   artist: Blink-182
   title: Give Me One Good Reason
   img: blink182.jpg
+  file: /audio/blink182.mp3
 -
   category: Rock
   artist: Bernard Butler
   title: Autograph
   img: bb.jpg
+  file: /audio/bb.mp3
 -
   category: Indie Rock
   artist: Blur
   title: "Coffee & Tv"
   img: blur.jpg
+  file: /audio/blur.mp3
 -
   category: Indie Rock
   artist: The Killers
   title: "Human"
   img: killer.jpg
+  file: /audio/human.mp3
 -
   category: Punk
   artist: Yellowcard
   title: "Make Me So"
   img: yellow.jpg
--
-  category: Punk
-  artist: Simple Plan
-  title: "You Suck At Love You Suck At Love"
-  img: sp.jpg
--
-  category: Alternative
-  artist: New Order
-  title: "Regret"
-  img: no.jpg
--
-  category: Metal
-  artist: Pantera
-  title: "Cowboys from Hell"
-  img: pantera.jpg
--
-  category: Punk
-  artist: Blink-182
-  title: Give Me One Good Reason
-  img: blink182.jpg
--
-  category: Rock
-  artist: Bernard Butler
-  title: Autograph
-  img: bb.jpg
--
-  category: Indie Rock
-  artist: Blur
-  title: "Coffee & Tv"
-  img: blur.jpg
--
-  category: Indie Rock
-  artist: The Killers
-  title: "Human"
-  img: killer.jpg
--
-  category: Punk
-  artist: Yellowcard
-  title: "Make Me So"
-  img: yellow.jpg
+  file: /audio/yellow.mp3
 -
   category: Punk
   artist: Simple Plan
   title: "You Suck At Love"
   img: sp.jpg
+  file: /audio/sp.mp3
 -
   category: Alternative
   artist: New Order
   title: "Regret"
   img: no.jpg
+  file: /audio/no.mp3
 -
   category: Metal
   artist: Pantera
   title: "Cowboys from Hell"
   img: pantera.jpg
+  file: /audio/pantera.mp3
+
+-
+  category: Punk
+  artist: Blink-182
+  title: Give Me One Good Reason
+  img: blink182.jpg
+  file: /audio/blink182.mp3
+-
+  category: Rock
+  artist: Bernard Butler
+  title: Autograph
+  img: bb.jpg
+  file: /audio/bb.mp3
+-
+  category: Indie Rock
+  artist: Blur
+  title: "Coffee & Tv"
+  img: blur.jpg
+  file: /audio/blur.mp3
+-
+  category: Indie Rock
+  artist: The Killers
+  title: "Human"
+  img: killer.jpg
+  file: /audio/human.mp3
+-
+  category: Punk
+  artist: Yellowcard
+  title: "Make Me So"
+  img: yellow.jpg
+  file: /audio/yellow.mp3
+-
+  category: Punk
+  artist: Simple Plan
+  title: "You Suck At Love"
+  img: sp.jpg
+  file: /audio/sp.mp3
+-
+  category: Alternative
+  artist: New Order
+  title: "Regret"
+  img: no.jpg
+  file: /audio/no.mp3
+-
+  category: Metal
+  artist: Pantera
+  title: "Cowboys from Hell"
+  img: pantera.jpg
+  file: /audio/pantera.mp3

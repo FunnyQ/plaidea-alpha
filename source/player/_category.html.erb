@@ -1,5 +1,5 @@
-<% data.basic.each do |item| %>
-<div class="player-item">
+<% data.basic.each_with_index do |item, index| %>
+<div id="trackID-<%= index %>" class="player-item">
   <div class="player-wrapper trans-03s">
 
     <!-- top info bar -->
@@ -35,9 +35,7 @@
           <a href="#" class="ui-controller trans-03s">
             <i class="fa fa-play"></i>
           </a>
-          <audio preload="none">
-            <source src="audio/yellow.m4a" type="audio/mpeg">
-          </audio>
+          <div class="jplayer-wrapper" data-audio="<%= item.file %>"></div>
         </div>
 
         <!-- Other options wrapper -->
