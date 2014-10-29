@@ -13,7 +13,8 @@ $player-footer-height: $player-topbar-height
     +gallery(4)
   +breakpoint($b-desktop)
     +gallery(3)
-
+  .player-highlight
+    +box-shadow(0 0 0 5px $c-player-highlight)
 .player-wrapper
   +border-radius($player-radius)
 
@@ -42,6 +43,9 @@ $player-footer-height: $player-topbar-height
   color: $c-player-topbar-text
   background-color: $c-player-topbar-track-bg
   +border-top-right-radius($player-radius)
+  &:hover
+    text-decoration: none
+    color: lighten($c-player-topbar-text, 50%)
 
 .player-main
   position: relative
@@ -64,85 +68,104 @@ $player-footer-height: $player-topbar-height
   top: 0
   width: 100%
   height: 100%
-  // background: image-url("assets/player-ui-line.png") center 85% no-repeat
+  background: image-url("assets/player-ui-line.png") center 83% no-repeat
   background-color: rgba(#000, .5)
   +background-size(contain)
-  .ui-main
-    width: 60%
-    height: 60%
-    margin: 8% auto 0 auto
-    // padding-top: 0.5em
-    +border-radius(50%)
-    // border: 5px solid $c-player-player-main-border
-    // background-color: rgba(#fff, .5)
-    text-align: center
-    font-size: 4em
-    .ui-controller
-      display: block
-      width: 100%
-      height: 100%
-      margin: 0 auto
-      line-height: 2
-      +border-radius(50%)
-      border: 25px solid $c-player-main-border
-      padding: 0
-      color: $c-player-main-border
-      &:hover
-        border: 25px solid $c-player-main-border-hover
-        color: $c-player-main-border-hover
-  .ui-option
-    +clearfix
-    width: 100%
-    height: 100%
-  .ui-fund-wrapper, .ui-skip-wrapper, .ui-subscribe-wrapper
-    +span(4)
-    // height: 100%
-    margin-top: -10px
+.ui-main
+  width: 60%
+  height: 60%
+  margin: 8% auto 0 auto
+  // padding-top: 0.5em
+  +border-radius(50%)
+  // border: 5px solid $c-player-player-main-border
+  // background-color: rgba(#fff, .5)
+  text-align: center
+  font-size: 4em
+.ui-controller
+  display: block
+  width: 100%
+  height: 100%
+  margin: 0 auto
+  line-height: 1.9
+  +border-radius(50%)
+  border: 25px solid $c-player-main-border
+  padding: 0
+  color: $c-player-main-border
+  &:hover
+    border: 25px solid $c-player-main-border-hover
+    color: $c-player-main-border-hover
+  +breakpoint($b-4s)
+    line-height: 2.7
+  +breakpoint($b-mobile)
+    line-height: 2.5
+  +breakpoint($b-desktop)
+    line-height: 2
+.ui-option
+  +clearfix
+  width: 100%
+  height: 100%
+.ui-fund-wrapper, .ui-skip-wrapper, .ui-subscribe-wrapper
+  +span(4)
+  // height: 100%
+  margin-top: -10px
 
-  .ui-fund-wrapper
-    .ui-option-btn
-      background-image: image-url("assets/player-ui-icon-fund.png")
-      @extend %ui-option-btn-bg-settings
-      &:hover
-        background-image: image-url("assets/player-ui-icon-fund-fff.png")
-  .ui-skip-wrapper
-    .ui-option-btn
-      background-image: image-url("assets/player-ui-icon-skip.png")
-      @extend %ui-option-btn-bg-settings
-      &:hover
-        background-image: image-url("assets/player-ui-icon-skip-fff.png")
-  .ui-subscribe-wrapper
-    .ui-option-btn
-      background-image: image-url("assets/player-ui-icon-subscribe.png")
-      @extend %ui-option-btn-bg-settings
-      &:hover
-        background-image: image-url("assets/player-ui-icon-subscribe-fff.png")
-
+.ui-fund-wrapper
   .ui-option-btn
-    +border-radius(50%)
-    padding-top: 50%
-    background-color: $c-player-ui-option-btn-bg
-    border: 2px solid $c-player-ui-option-btn-border
-    cursor: pointer
-    color: $c-player-ui-option-btn-text
-    font-size: $fz-xs
-    text-align: center
+    background-image: image-url("assets/player-ui-icon-fund.png")
+    @extend %ui-option-btn-bg-settings
     &:hover
-      background-color: $c-player-ui-option-btn-bg-hover
-      color: $c-player-ui-option-btn-text-hover
-  .ui-option-btn-icon
-    margin: 10px auto 0 auto
-    width: 50%
-  .ui-option-large
-    width: 80px
-    height: 80px
+      background-image: image-url("assets/player-ui-icon-fund-fff.png")
+.ui-skip-wrapper
+  .ui-option-btn
+    background-image: image-url("assets/player-ui-icon-skip.png")
+    @extend %ui-option-btn-bg-settings
+    &:hover
+      background-image: image-url("assets/player-ui-icon-skip-fff.png")
+  .next
+    background-image: image-url("assets/player-ui-icon-next.png")
+    &:hover
+      background-image: image-url("assets/player-ui-icon-next-fff.png")
+.ui-subscribe-wrapper
+  .ui-option-btn
+    background-image: image-url("assets/player-ui-icon-subscribe.png")
+    @extend %ui-option-btn-bg-settings
+    &:hover
+      background-image: image-url("assets/player-ui-icon-subscribe-fff.png")
+    &:after
+      content: "subscribe"
+  .subscribed
+    background-image: image-url("assets/player-ui-icon-unsubscribe.png")
+    &:hover
+      background-image: image-url("assets/player-ui-icon-unsubscribe-fff.png")
+    &:after
+      content: "unsubscribe"
 
-  .ui-option-small
-    width: 50px
-    height: 50px
-    margin: 45% auto 0 auto
-    .ui-option-btn-icon
-      margin-top: 13px
+.ui-option-btn
+  +border-radius(50%)
+  padding-top: 50%
+  background-color: $c-player-ui-option-btn-bg
+  border: 2px solid $c-player-ui-option-btn-border
+  cursor: pointer
+  color: $c-player-ui-option-btn-text
+  font-size: $fz-xs
+  text-align: center
+  &:hover
+    background-color: $c-player-ui-option-btn-bg-hover
+    color: $c-player-ui-option-btn-text-hover
+.ui-option-btn-icon
+  margin: 10px auto 0 auto
+  width: 50%
+.ui-option-large
+  width: 85px
+  height: 85px
+
+.ui-option-small
+  width: 50px
+  height: 50px
+  margin: 45% auto 0 auto
+  padding-top: 0
+  .ui-option-btn-icon
+    margin-top: 13px
 
 .player-footer
   +clearfix
